@@ -1,11 +1,12 @@
 import "../styles/NavBar.css";
-import logo from '../assets/Logo.png'
+import "../styles/responsive/NavBar.css"
 
 export default function NavBar() {
   return (
     <>
       <nav className="navBar">
-        <div className="div1-navBar">
+        <div className="title-image-container">
+          <img id="logo" src="src\assets\Logo.png" alt="" />
           <h1 className="h1-div-navBar">HairRush</h1>
         </div>
         <div className="div2-navBar">

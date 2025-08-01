@@ -16,6 +16,8 @@
     "@material-tailwind/react": "^2.1.10",
     "@mui/material": "^7.1.2",
     "@mui/styled-engine-sc": "^7.1.1",
+    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.10.13",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "styled-components": "^6.1.19",
