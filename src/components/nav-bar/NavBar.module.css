@@ -16,7 +16,7 @@
   color: #c1d1e1;
 }
 
-.title-image-container {
+.titleImageContainer {
   width: 45%;
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 1));
 }
 
-.h1-div-navBar {
+.h1DivNavBar {
   margin-left: 0px;
   font-family: "Edu NSW ACT Cursive";
   font-weight: 400;
@@ -40,13 +40,13 @@
   text-shadow: 1px 1px 6px black;
 }
 
-.img-div-navBar {
+.imgDivNavBar {
   width: 35px;
   height: auto;
   border-radius: 100%;
 }
 
-.div2-navBar {
+.div2NavBar {
   width: 55%;
   display: flex;
   align-items: center;
@@ -56,7 +56,7 @@
   padding-right: 1%;
 }
 
-.div-div2-navBar {
+.divDiv2NavBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,10 +64,10 @@
   border-radius: 28px;
   border: 1px solid transparent;
   transition: all 0.3s ease-in-out;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
-.div-div2-navBar:hover {
+.divDiv2NavBar:hover {
   background-color: #c1d1e1;
   cursor: pointer;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
@@ -75,11 +75,11 @@
   text-shadow: none;
 }
 
-.div-div2-navBar:hover h3 {
+.divDiv2NavBar:hover h3 {
   text-shadow: none;
 }
 
-.div-div2-navBar h3 {
+.divDiv2NavBar h3 {
   font-size: 16px;
   text-shadow: 1px 1px 2px black;
   margin-left: 6px;
@@ -92,21 +92,21 @@
     padding: 15px 0;
   }
 
-  .title-image-container {
+  .titleImageContainer {
     width: 100%;
     justify-content: center;
     padding-left: 0;
     margin-bottom: 15px;
   }
 
-  .div2-navBar {
+  .div2NavBar {
     width: 100%;
     flex-direction: column;
     gap: 10px;
     padding-right: 0;
   }
 
-  .div-div2-navBar {
+  .divDiv2NavBar {
     width: 90%;
     justify-content: center;
   }
@@ -118,12 +118,12 @@
     padding: 20px 0;
   }
 
-  .title-image-container {
+  .titleImageContainer {
     width: 40%;
     padding-left: 2%;
   }
 
-  .div2-navBar {
+  .div2NavBar {
     width: 60%;
     flex-wrap: wrap;
     gap: 10px;
@@ -131,7 +131,7 @@
     padding-right: 2%;
   }
 
-  .div-div2-navBar {
+  .divDiv2NavBar {
     padding: 8px;
     min-width: 45%;
     justify-content: center;
@@ -145,7 +145,7 @@
     padding: 15px 0;
   }
 
-  .title-image-container {
+  .titleImageContainer {
     width: 100%;
     justify-content: center;
     padding-left: 0;
@@ -159,19 +159,19 @@
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 1));
   }
 
-  .div2-navBar {
+  .div2NavBar {
     width: 100%;
     flex-direction: column;
     gap: 10px;
     padding-right: 0;
   }
 
-  .div-div2-navBar {
+  .divDiv2NavBar {
     width: 90%;
     justify-content: center;
   }
-  
-  .div-div2-navBar h3 {
+
+  .divDiv2NavBar h3 {
     font-size: 22px;
     text-shadow: 1px 1px 2px black;
     margin-left: 6px;
@@ -183,7 +183,7 @@
     height: 12vh;
   }
 
-  .title-image-container {
+  .titleImageContainer {
     width: 42%;
     padding-left: 3%;
   }
@@ -192,28 +192,28 @@
     width: 10%;
   }
 
-  .h1-div-navBar {
+  .h1DivNavBar {
     font-size: 28px;
   }
 
-  .div2-navBar {
+  .div2NavBar {
     width: 58%;
     font-size: 12px;
     justify-content: space-between;
     padding-right: 2%;
   }
 
-  .div-div2-navBar {
+  .divDiv2NavBar {
     padding: 6px 8px;
     margin: 0 2px;
   }
 
-  .div-div2-navBar h3 {
+  .divDiv2NavBar h3 {
     font-size: 13px;
     margin-left: 4px;
   }
 
-  .img-div-navBar {
+  .imgDivNavBar {
     width: 30px;
   }
 }
@@ -223,7 +223,7 @@
     height: 13vh;
   }
 
-  .title-image-container {
+  .titleImageContainer {
     width: 44%;
     padding-left: 3.5%;
   }
@@ -232,25 +232,25 @@
     width: 11%;
   }
 
-  .h1-div-navBar {
+  .h1DivNavBar {
     font-size: 29px;
   }
 
-  .div2-navBar {
+  .div2NavBar {
     width: 56%;
     font-size: 13px;
   }
 
-  .div-div2-navBar {
+  .divDiv2NavBar {
     padding: 7px 10px;
   }
 
-  .div-div2-navBar h3 {
+  .divDiv2NavBar h3 {
     font-size: 15px;
     margin-left: 5px;
   }
 
-  .img-div-navBar {
+  .imgDivNavBar {
     width: 32px;
   }
 }
@@ -260,7 +260,7 @@
     height: 16vh;
   }
 
-  .title-image-container {
+  .titleImageContainer {
     width: 40%;
     padding-left: 5%;
   }
@@ -269,25 +269,25 @@
     width: 10%;
   }
 
-  .h1-div-navBar {
+  .h1DivNavBar {
     font-size: 36px;
   }
 
-  .div2-navBar {
+  .div2NavBar {
     width: 60%;
     font-size: 16px;
   }
 
-  .div-div2-navBar {
+  .divDiv2NavBar {
     padding: 10px 16px;
   }
 
-  .div-div2-navBar h3 {
+  .divDiv2NavBar h3 {
     font-size: 20px;
     margin-left: 8px;
   }
 
-  .img-div-navBar {
+  .imgDivNavBar {
     width: 40px;
   }
 }
