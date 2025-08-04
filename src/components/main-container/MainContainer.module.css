@@ -1,0 +1,17 @@
+.MainContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.div {
+    position: absolute;
+    background-color: black;
+    width: 200px; 
+    height: 40px; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 10; 
+}
