@@ -10,7 +10,7 @@
 .navBar {
   width: 100%;
   height: 13vh;
-  background-color: transparent;
+  background-color: black;
   display: flex;
   border-bottom: 3px solid white;
   color: white;

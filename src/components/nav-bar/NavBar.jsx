@@ -9,6 +9,10 @@ export default function NavBar() {
       </div>
       <div className={styles.div2NavBar}>
         <div className={styles.divDiv2NavBar}>
+          <span className="material-symbols-outlined">favorite</span>
+          <h3>Agendar</h3>
+        </div>
+        <div className={styles.divDiv2NavBar}>
           <span className="material-symbols-outlined">content_cut</span>
           <h3>Servicios</h3>
         </div>
@@ -19,10 +23,6 @@ export default function NavBar() {
         <div className={styles.divDiv2NavBar}>
           <span className="material-symbols-outlined">3p</span>
           <h3>Información de contacto</h3>
-        </div>
-        <div className={styles.divDiv2NavBar}>
-          <span className="material-symbols-outlined">favorite</span>
-          <h3>¿Porqué HairRush?</h3>
         </div>
       </div>
     </nav>
