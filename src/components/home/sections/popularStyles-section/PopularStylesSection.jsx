@@ -1,10 +1,10 @@
 import styles from "./PopularStylesSection.module.css"
 import ImageCard from "../../cards/image-card/ImageCard"
 
-export default function OwnSection() {
+export default function PopularStylesSection() {
   return (
     <>
-      <section className={styles.OwnSection}>
+      <section className={styles.popularStylesSection}>
         <h1 className={styles.title}>Estilos Populares</h1>
         <div className={styles.cardsContainer}>
             <ImageCard title={"Fade"} imageUrl={"https://lh3.googleusercontent.com/aida-public/AB6AXuAb6mFWe5gCbEWrnIwXtgo9jylrHh9Mg9TYzt6MCYCGNyrfkMGGaoYJPwHy3HlkWD2hijwlQhTSwzfeh6kDX-rpTKP2fUtL0AuPQ3nDk5wT__ZX0kzK_6gFbFCqkf6ReJ2gqluiFOTX1Oq4EwFd-uMzGoTceS_YkS9uS22pBxi1hbi8aaCsXxwgTyl7HJPNsxR5s6oyVwIYAn0CBXwzj0VjgKgQOkwZ5IYkmQ_y7nJ1khVjtXBhokfpnYb_AqQnx8YDTzOmwUt5SnCU"
