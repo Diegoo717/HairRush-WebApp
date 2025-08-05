@@ -1,5 +1,5 @@
 import styles from "./SpecialPackagesSection.module.css"
-import SpecialPackageCard from "../specialPackage-card/SpecialPackageCard"
+import SpecialPackageCard from "../../cards/specialPackage-card/SpecialPackageCard"
 
 export default function SepecialPackagesSection() {
   return (

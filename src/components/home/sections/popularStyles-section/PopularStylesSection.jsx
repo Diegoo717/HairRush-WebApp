@@ -1,5 +1,5 @@
 import styles from "./PopularStylesSection.module.css"
-import ImageCard from "../image-card/ImageCard"
+import ImageCard from "../../cards/image-card/ImageCard"
 
 export default function OwnSection() {
   return (
