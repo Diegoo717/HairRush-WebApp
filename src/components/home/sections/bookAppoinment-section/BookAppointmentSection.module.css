@@ -12,6 +12,7 @@
     color: white;
     font-size: 32px;
     margin-bottom: 60px;
+    text-align: center;
 }
 
 .bookAppointmentButton {
@@ -42,4 +43,12 @@
 .bookAppointmentButton h3 {
   font-size: 20px;
   margin: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .bookAppointmentSection {
+    height: 110vh;
+  }
 }

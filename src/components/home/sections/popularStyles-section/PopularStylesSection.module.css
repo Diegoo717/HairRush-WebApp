@@ -22,3 +22,24 @@
     justify-content: space-evenly;
 }
 
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .popularStylesSection {
+    padding-top: 15vh;
+    height: 130vh;
+  }
+
+  .cardsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+}
+

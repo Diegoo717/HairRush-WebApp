@@ -16,6 +16,7 @@
   position: fixed;
   z-index: 1000; 
   top: 0;
+  align-items: center;
 }
 
 .titleImageContainer {
@@ -25,6 +26,8 @@
   justify-content: flex-start;
   padding-left: 4%;
   color: white;
+  opacity: 0;
+  animation: fadeInContent 2s ease-in-out 0.5s forwards;
 }
 
 #logo {
@@ -32,6 +35,8 @@
   height: auto;
   margin: 0;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 1));
+  opacity: 0;
+  animation: fadeInContent 2s ease-in-out 0.5s forwards;
 }
 
 .h1DivNavBar {
@@ -40,12 +45,16 @@
   font-weight: 400;
   font-size: 30px;
   text-shadow: 1px 1px 6px black;
+  opacity: 0;
+  animation: fadeInContent 2s ease-in-out 0.5s forwards;
 }
 
 .imgDivNavBar {
   width: 35px;
   height: auto;
   border-radius: 100%;
+  opacity: 0;
+  animation: fadeInContent 2s ease-in-out 0.5s forwards;
 }
 
 .div2NavBar {
@@ -56,6 +65,8 @@
   color: white;
   font-size: 13px;
   padding-right: 1%;
+  opacity: 0;
+  animation: fadeInContent 2s ease-in-out 0.5s forwards;
 }
 
 .divDiv2NavBar {
@@ -67,6 +78,9 @@
   border: 1px solid transparent;
   transition: all 0.3s ease-in-out;
   white-space: nowrap;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeInContent 2s ease-in-out 0.5s forwards;
 }
 
 .divDiv2NavBar:hover {
@@ -85,98 +99,224 @@
   font-size: 16px;
   text-shadow: 1px 1px 2px black;
   margin-left: 6px;
+  opacity: 0;
+  animation: fadeInContent 2s ease-in-out 0.5s forwards;
 }
 
-@media (max-width: 480px) {
+.material-symbols-outlined{
+  animation: fadeInContent 2s ease-in-out 0.5s forwards;
+}
+
+.hamburgerButton {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-right: 4%;
+}
+
+.hamburgerButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hamburgerButton span {
+  font-size: 28px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
   .navBar {
-    height: auto;
-    flex-direction: column;
-    padding: 15px 0;
+    height: 13vh;
+    justify-content: space-between;
+    position: relative;
   }
 
   .titleImageContainer {
-    width: 100%;
-    justify-content: center;
-    padding-left: 0;
-    margin-bottom: 15px;
+    width: auto;
+    padding-left: 4%;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  #logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .h1DivNavBar {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .hamburgerButton {
+    display: block;
   }
 
   .div2NavBar {
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
+    background-color: black;
     flex-direction: column;
-    gap: 10px;
-    padding-right: 0;
+    padding: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .div2NavBar.menuOpen {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .divDiv2NavBar {
     width: 90%;
-    justify-content: center;
+    margin: 10px auto;
+    justify-content: flex-start;
+    padding: 15px 20px;
+  }
+
+  .divDiv2NavBar h3 {
+    font-size: 18px;
+    margin-left: 15px;
   }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+  .titleImageContainer {
+    padding-left: 3%;
+  }
+
+  #logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .h1DivNavBar {
+    font-size: 26px;
+  }
+
+  .hamburgerButton {
+    display: block;
+  }
+
+  .div2NavBar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    flex-direction: column;
+    padding: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .div2NavBar.menuOpen {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .divDiv2NavBar {
+    width: 90%;
+    margin: 10px auto;
+    justify-content: flex-start;
+    padding: 15px 20px;
+  }
+
+  .divDiv2NavBar h3 {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
   .navBar {
-    height: auto;
-    padding: 20px 0;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
   }
 
   .titleImageContainer {
     width: 40%;
-    padding-left: 2%;
+    padding-left: 3%;
+  }
+
+  #logo {
+    width: 10%;
+    min-width: 50px;
+  }
+
+  .h1DivNavBar {
+    font-size: 28px;
   }
 
   .div2NavBar {
     width: 60%;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     padding-right: 2%;
   }
 
   .divDiv2NavBar {
-    padding: 8px;
+    padding: 8px 12px;
     min-width: 45%;
-    justify-content: center;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .navBar {
-    height: auto;
-    flex-direction: column;
-    padding: 15px 0;
-  }
-
-  .titleImageContainer {
-    width: 100%;
-    justify-content: center;
-    padding-left: 0;
-    margin-bottom: 15px;
-  }
-
-  #logo {
-    width: 10%;
-    height: auto;
-    margin: 0;
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 1));
-  }
-
-  .div2NavBar {
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
-    padding-right: 0;
-  }
-
-  .divDiv2NavBar {
-    width: 90%;
     justify-content: center;
   }
 
   .divDiv2NavBar h3 {
-    font-size: 22px;
-    text-shadow: 1px 1px 2px black;
-    margin-left: 6px;
+    font-size: 16px;
+  }
+  .hamburgerButton {
+    display: block;
+  }
+
+  .div2NavBar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    flex-direction: column;
+    padding: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .div2NavBar.menuOpen {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .divDiv2NavBar {
+    width: 90%;
+    margin: 10px auto;
+    justify-content: flex-start;
+    padding: 15px 20px;
+  }
+
+  .divDiv2NavBar h3 {
+    font-size: 18px;
+    margin-left: 15px;
   }
 }
 
@@ -291,5 +431,16 @@
 
   .imgDivNavBar {
     width: 40px;
+  }
+}
+
+/* Animaitions */
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

@@ -5,7 +5,9 @@ export default function MainContainer(){
     return (
         <>
         <main className={styles.MainContainer}>
-            <Spline scene="https://prod.spline.design/ks6uYhieEtm7wAQM/scene.splinecode" />
+            <div className={styles.splineContainer}>
+                <Spline scene="https://prod.spline.design/ks6uYhieEtm7wAQM/scene.splinecode" />
+            </div>
             <div className={styles.div}></div>
         </main>
         </>
