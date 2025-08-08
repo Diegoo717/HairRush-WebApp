@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import NavBar from "../components/navigation/nav-bar";
 import MainContainer from "../components/home/main/main-container/MainContainer";

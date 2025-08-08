@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import NavBar from "../components/navigation/nav-bar";
 import MainContainer from "../components/BookAppointment/main/MainContainer";
+import Footer from "../components/navigation/footer/Footer";
+
 
 export default function BookAppointment() {
     useEffect(() => {
@@ -98,6 +100,7 @@ export default function BookAppointment() {
 
             <NavBar />
             <MainContainer />
+            <Footer></Footer>
         </>
     );
 }
