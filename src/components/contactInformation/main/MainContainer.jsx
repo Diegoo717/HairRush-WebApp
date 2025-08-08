@@ -7,7 +7,9 @@ export default function MainContainer() {
       <div className={styles.mainContainer}>
         <section className={styles.contactUsSection}>
           <div className={styles.container}>
-            <h1 className={styles.title}>Contáctanos</h1>
+            <div className={styles.titleWrapper}>
+              <h1 className={styles.title}>Contáctanos</h1>
+            </div>
             <p className={styles.description}>
               ¡Estamos aquí para ayudarte! Ya sea que tengas una pregunta sobre
               nuestros servicios, quieras reservar una cita o simplemente
@@ -19,7 +21,9 @@ export default function MainContainer() {
         </section>
         <section className={styles.mapSection}>
           <div className={styles.container}>
-            <h3 className={styles.mapTitle}>Nuestra Localización</h3>
+            <div className={styles.titleWrapper}>
+              <h3 className={styles.mapTitle}>Nuestra Localización</h3>
+            </div>
             <iframe
               className={styles.map}
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1477.1508461569806!2d-101.15026159419662!3d20.13974163848755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842cfab60ca5e1d3%3A0x60ae1a745fc6bf18!2sITSUR%20Instituto%20Tecnol%C3%B3gico%20Superior%20del%20Sur%20de%20Guanajuato!5e0!3m2!1ses!2smx!4v1754677218830!5m2!1ses!2smx"
@@ -35,7 +39,9 @@ export default function MainContainer() {
         </section>
         <section className={styles.contactInfoSection}>
           <div className={styles.container}>
-            <h3 className={styles.infoTitle}>Informacion de contacto</h3>
+            <div className={styles.titleWrapper}>
+              <h3 className={styles.infoTitle}>Informacion de contacto</h3>
+            </div>
             <ContactDetails
               title={"Dirección"}
               content={
@@ -54,7 +60,9 @@ export default function MainContainer() {
         </section>
         <section className={styles.aboutUsSection}>
           <div className={styles.container}>
-            <h3 className={styles.aboutUsTitle}>Sobre Nosotros</h3>
+            <div className={styles.titleWrapper}>
+              <h3 className={styles.aboutUsTitle}>Sobre Nosotros</h3>
+            </div>
             <div className={styles.aboutContent}>
               <div className={styles.aboutItem}>
                 <div className={styles.iconContainer}>
