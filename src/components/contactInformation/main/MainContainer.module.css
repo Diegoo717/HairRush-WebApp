@@ -70,6 +70,7 @@ h3 {
   flex-direction: column;
   gap: 5%;
   color: white;
+  margin-bottom: 10vh;
 }
 
 .map {
@@ -89,6 +90,7 @@ h3 {
   flex-direction: column;
   gap: 5%;
   color: white;
+  margin-bottom: 10vh;
 }
 
 .aboutUsSection {

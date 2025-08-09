@@ -49,6 +49,12 @@ export default function MainContainer() {
               }
             ></ContactDetails>
             <ContactDetails
+              title={"Horarios de atención"}
+              content={
+                "Lunes a Viernes: 8:00 AM - 2:00 PM y 4:00 PM - 8:00 PM\nSábados y Domingos: Cerrado"
+              }
+            ></ContactDetails>
+            <ContactDetails
               title={"Telefono"}
               content={"+52 445 105 91 92"}
             ></ContactDetails>
