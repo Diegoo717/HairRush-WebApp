@@ -1,0 +1,58 @@
+.ourServicesCard{
+  width: 90%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoContainer{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.cardTitle{
+  font-size: 38px;
+  color: white;
+  text-align: center;
+}
+
+.cardDescription{
+  width: 70%;
+  text-align: justify;
+  font-size: 16px;
+  color: #A6ABB0;
+}
+
+.cardAge{
+  font-size: 16px;
+  color: #A6ABB0;
+}
+
+.cardPrice{
+  font-size: 20px;
+  color: #A6ABB0;
+}
+
+.imgContainer{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.thumbnail {
+  width: 80%; 
+  aspect-ratio: 16 / 9; 
+  object-fit: cover; 
+  object-position: center;
+  border-radius: 12px;
+}

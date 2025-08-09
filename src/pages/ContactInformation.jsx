@@ -16,7 +16,7 @@ function ContactInformation() {
     return (
         <>
             <Helmet>
-                <title>Contacto - HairRush | Ubicación, teléfono y horarios de barbería</title>
+                <title>Contacto - HairRush | Ubicación, teléfono y horarios de atención</title>
                 <meta name="description" content="Encuentra nuestra ubicación, horarios de atención, número de teléfono y dirección de HairRush barbería. ¡Contáctanos para más información sobre nuestros servicios!" />
                 <meta name="keywords" content="HairRush contacto, ubicación barbería, teléfono barbería, dirección HairRush, horarios barbería, contactar barbero, información barbería, mapa ubicación" />
                 <meta name="author" content="HairRush" />

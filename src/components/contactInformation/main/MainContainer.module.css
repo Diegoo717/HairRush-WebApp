@@ -19,7 +19,7 @@
 .titleWrapper {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   align-items: center;
 }
 
@@ -29,6 +29,7 @@
 }
 
 .description {
+  text-align: justify;
   font-size: 22px;
   color: #a6abb0;
 }
