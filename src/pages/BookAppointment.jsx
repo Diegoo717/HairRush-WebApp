@@ -8,7 +8,7 @@ import Footer from "../components/navigation/footer/Footer";
 export default function BookAppointment() {
     useEffect(() => {
         const timer = setTimeout(() => {
-            console.log('SEO aplicado:', document.title);
+            console.log('ready SEO:', document.title);
         }, 100);
         
         return () => clearTimeout(timer);
