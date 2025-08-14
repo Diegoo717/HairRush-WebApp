@@ -14,6 +14,7 @@ function App() {
           <Route path="/book-appointment" element={<BookAppointment />} />
           <Route path="/contact-information" element={<ContactInformation />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/appointment-calendar" element="" />
         </Routes>
       </Router>
     </HelmetProvider>

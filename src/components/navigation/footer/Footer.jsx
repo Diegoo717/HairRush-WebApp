@@ -5,7 +5,13 @@ export default function Footer() {
     <>
       <footer>
         <div className={styles.infoContainer}>
-          <p>Desarrollador</p>
+          <a
+            href="https://github.com/Diegoo717"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>Desarrollador</p>
+          </a>
           <p>Politicas de privacidad</p>
           <p>Terminos de servicio</p>
         </div>
@@ -29,7 +35,7 @@ export default function Footer() {
           </div>
 
           <div
-          className={styles.icon}
+            className={styles.icon}
             class="text-[#a5abb1]"
             data-icon="FacebookLogo"
             data-size="24px"
@@ -47,7 +53,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={styles.infoContainer}>
-            <p>© 2024 HairRush. Todos los derechos reservados.</p>
+          <p>© 2024 HairRush. Todos los derechos reservados.</p>
         </div>
       </footer>
     </>

@@ -8,12 +8,28 @@ footer {
   flex-direction: column;
 }
 
+footer a {
+  text-decoration: none !important;
+  color: inherit !important;
+  width: 20%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 footer > :first-child {
   width: 100%;
   height: 30%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+footer > :first-child a p {
+  margin: 0;
+  text-align: center;
+  width: 100%;
 }
 
 footer > :first-child p {

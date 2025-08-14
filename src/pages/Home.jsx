@@ -66,7 +66,7 @@ function Home() {
                 </script>
             </Helmet>
 
-            <NavBar />
+            <NavBar animated={true}/>
             <MainContainer />
             <SpecialPackagesSection />
             <PopularStylesSection />
