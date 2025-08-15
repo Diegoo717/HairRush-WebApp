@@ -119,7 +119,7 @@ function ContactInformation() {
                 </script>
             </Helmet>
 
-            <NavBar />
+            <NavBar page="contact-information"/>
             <MainContainer />
             <Footer />
         </>

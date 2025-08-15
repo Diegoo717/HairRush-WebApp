@@ -24,7 +24,7 @@
     transparent
   );
   z-index: 1;
-  animation: shineEffect 3s ease-out forwards;
+  animation: shineEffect 2s ease-out forwards;
   animation-delay: 0.3s;
 }
 

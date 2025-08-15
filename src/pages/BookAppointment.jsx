@@ -98,7 +98,7 @@ export default function BookAppointment() {
                 </script>
             </Helmet>
 
-            <NavBar />
+            <NavBar page="book-appointment"/>
             <MainContainer />
             <Footer></Footer>
         </>

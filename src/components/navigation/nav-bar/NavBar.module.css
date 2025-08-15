@@ -19,7 +19,7 @@
   display: flex;
   color: white;
   position: fixed;
-  z-index: 1000; 
+  z-index: 1000;
   top: 0;
   align-items: center;
 }
@@ -88,9 +88,16 @@
   text-shadow: none;
 }
 
+.currentDivDiv2NavBar {
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  color: #161a1d;
+  text-shadow: none;
+}
+
 .divDiv2NavBar h3 {
   font-size: 16px;
-  text-shadow: 1px 1px 2px black;
   margin-left: 6px;
 }
 
@@ -122,32 +129,122 @@
 
 /* Responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .navBar {
     height: 13vh;
     justify-content: space-between;
-    position: relative;
+    padding: 0 15px;
   }
 
   .titleImageContainer {
     width: auto;
-    padding-left: 4%;
+    padding-left: 0;
     justify-content: flex-start;
+  }
+
+  #logo {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+  }
+
+  .h1DivNavBar {
+    font-size: 20px;
+    margin-left: 8px;
+  }
+
+  .hamburgerButton {
+    display: block;
+    margin-right: 0;
+    padding: 6px;
+  }
+
+  .hamburgerButton span {
+    font-size: 24px;
+  }
+
+  .div2NavBar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    flex-direction: column;
+    padding: 10px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .div2NavBar.menuOpen {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navBar a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .divDiv2NavBar {
+    width: 90%;
+    max-width: none;
+    margin: 5px 15px;
+    justify-content: flex-start;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border-radius: 30px;
+  }
+
+  .divDiv2NavBar span {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .divDiv2NavBar h3 {
+    font-size: 16px;
+    margin-left: 12px;
+    line-height: 1;
+    margin-top: 0;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .navBar {
+    height: 65px;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .titleImageContainer {
+    width: auto;
+    padding-left: 0;
+    justify-content: center;
+    align-items: center;
   }
 
   #logo {
     width: 40px;
     height: 40px;
+    min-width: 40px;
   }
 
   .h1DivNavBar {
-    font-size: 24px;
+    font-size: 22px;
     margin-left: 10px;
   }
 
   .hamburgerButton {
     display: block;
+    margin-right: 0;
   }
 
   .div2NavBar {
@@ -157,12 +254,13 @@
     width: 100%;
     background-color: black;
     flex-direction: column;
-    padding: 0;
+    padding: 15px 0;
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .div2NavBar.menuOpen {
@@ -171,35 +269,65 @@
     visibility: visible;
   }
 
+  .navBar a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .divDiv2NavBar {
     width: 90%;
-    margin: 10px auto;
+    max-width: none;
+    margin: 6px 20px;
     justify-content: flex-start;
-    padding: 15px 20px;
+    padding: 14px 18px;
+    box-sizing: border-box;
+    border-radius: 30px;
+  }
+
+  .divDiv2NavBar span {
+    line-height: 1;
+    display: flex;
+    align-items: center;
   }
 
   .divDiv2NavBar h3 {
-    font-size: 18px;
-    margin-left: 15px;
+    font-size: 17px;
+    margin-left: 14px;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navBar {
+    height: 70px;
+    justify-content: space-between;
+    padding: 0 25px;
+  }
+
   .titleImageContainer {
-    padding-left: 3%;
+    width: auto;
+    padding-left: 0;
+    justify-content: flex-start;
   }
 
   #logo {
     width: 45px;
     height: 45px;
+    min-width: 45px;
   }
 
   .h1DivNavBar {
-    font-size: 26px;
+    font-size: 24px;
+    margin-left: 12px;
   }
 
   .hamburgerButton {
     display: block;
+    margin-right: 0;
   }
 
   .div2NavBar {
@@ -209,12 +337,13 @@
     width: 100%;
     background-color: black;
     flex-direction: column;
-    padding: 0;
+    padding: 20px 0;
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .div2NavBar.menuOpen {
@@ -223,98 +352,43 @@
     visibility: visible;
   }
 
-  .divDiv2NavBar {
-    width: 90%;
-    margin: 10px auto;
-    justify-content: flex-start;
-    padding: 15px 20px;
-  }
-
-  .divDiv2NavBar h3 {
-    font-size: 18px;
-    margin-left: 15px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .navBar {
-    height: 14vh;
+  .navBar a {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-  }
-
-  .titleImageContainer {
-    width: 40%;
-    padding-left: 3%;
-  }
-
-  #logo {
-    width: 10%;
-    min-width: 50px;
-  }
-
-  .h1DivNavBar {
-    font-size: 28px;
-  }
-
-  .div2NavBar {
-    width: 60%;
-    flex-wrap: wrap;
-    gap: 8px;
     justify-content: center;
-    padding-right: 2%;
-  }
-
-  .divDiv2NavBar {
-    padding: 8px 12px;
-    min-width: 45%;
-    justify-content: center;
-  }
-
-  .divDiv2NavBar h3 {
-    font-size: 16px;
-  }
-  .hamburgerButton {
-    display: block;
-  }
-
-  .div2NavBar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    flex-direction: column;
-    padding: 0;
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .div2NavBar.menuOpen {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
+    align-items: center;
   }
 
   .divDiv2NavBar {
     width: 90%;
-    margin: 10px auto;
+    max-width: none;
+    margin: 8px 25px;
     justify-content: flex-start;
-    padding: 15px 20px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+  }
+
+  .divDiv2NavBar span {
+    line-height: 1;
+    display: flex;
+    align-items: center;
   }
 
   .divDiv2NavBar h3 {
     font-size: 18px;
-    margin-left: 15px;
+    margin-left: 16px;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1025px) and (max-width: 1599px) {
   .navBar {
     height: 12vh;
+    justify-content: flex-start;
+    padding: 0;
   }
 
   .titleImageContainer {
@@ -327,34 +401,54 @@
   }
 
   .h1DivNavBar {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .div2NavBar {
     width: 58%;
-    font-size: 12px;
+    font-size: 15px;
     justify-content: space-between;
     padding-right: 2%;
+    position: static;
+    flex-direction: row;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    background-color: transparent;
   }
 
   .divDiv2NavBar {
-    padding: 6px 8px;
-    margin: 0 2px;
+    padding: 10px 12px;
+    margin: 0 4px;
+    width: auto;
+    max-width: none;
+    justify-content: space-between;
+  }
+
+  .divDiv2NavBar span {
+    font-size: 22px;
   }
 
   .divDiv2NavBar h3 {
-    font-size: 13px;
-    margin-left: 4px;
+    font-size: 16px;
+    margin-left: 8px;
   }
 
   .imgDivNavBar {
-    width: 30px;
+    width: 32px;
+  }
+
+  .hamburgerButton {
+    display: none;
   }
 }
 
-@media (min-width: 1441px) and (max-width: 1549px) {
+@media (min-width: 1600px) and (max-width: 1919px) {
   .navBar {
     height: 13vh;
+    justify-content: flex-start;
+    padding: 0;
   }
 
   .titleImageContainer {
@@ -367,31 +461,53 @@
   }
 
   .h1DivNavBar {
-    font-size: 29px;
+    font-size: 34px;
   }
 
   .div2NavBar {
     width: 56%;
-    font-size: 13px;
+    font-size: 16px;
+    position: static;
+    flex-direction: row;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    background-color: transparent;
+    padding-right: 2%;
   }
 
   .divDiv2NavBar {
-    padding: 7px 10px;
+    padding: 12px 14px;
+    width: auto;
+    max-width: none;
+    margin: 0 4px;
+    justify-content: space-between;
+  }
+
+  .divDiv2NavBar span {
+    font-size: 24px;
   }
 
   .divDiv2NavBar h3 {
-    font-size: 15px;
-    margin-left: 5px;
+    font-size: 18px;
+    margin-left: 8px;
   }
 
   .imgDivNavBar {
-    width: 32px;
+    width: 36px;
+  }
+
+  .hamburgerButton {
+    display: none;
   }
 }
 
-@media (min-width: 1550px) {
+@media (min-width: 1920px) {
   .navBar {
     height: 16vh;
+    justify-content: flex-start;
+    padding: 0;
   }
 
   .titleImageContainer {
@@ -404,30 +520,49 @@
   }
 
   .h1DivNavBar {
-    font-size: 36px;
+    font-size: 40px;
   }
 
   .div2NavBar {
     width: 60%;
-    font-size: 16px;
+    font-size: 18px;
+    position: static;
+    flex-direction: row;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    background-color: transparent;
+    padding-right: 2%;
   }
 
   .divDiv2NavBar {
-    padding: 10px 16px;
+    padding: 14px 18px;
+    width: auto;
+    max-width: none;
+    margin: 0 6px;
+    justify-content: space-between;
+  }
+
+  .divDiv2NavBar span {
+    font-size: 28px;
   }
 
   .divDiv2NavBar h3 {
-    font-size: 20px;
-    margin-left: 8px;
+    font-size: 22px;
+    margin-left: 12px;
   }
 
   .imgDivNavBar {
-    width: 40px;
+    width: 44px;
+  }
+
+  .hamburgerButton {
+    display: none;
   }
 }
 
 /* Animations */
-
 @keyframes fadeInContent {
   from {
     opacity: 0;

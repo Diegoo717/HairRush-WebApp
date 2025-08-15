@@ -213,7 +213,7 @@ function Services() {
                 </script>
             </Helmet>
 
-            <NavBar />
+            <NavBar page="services"/>
             <MainContainer />
             <Footer />
         </>
