@@ -16,22 +16,55 @@
   animation: fadeInContent 2s ease-in-out 0.5s forwards;
 }
 
-.titleWrapper {
+header {
   width: 100%;
+  height: 100vh;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 5%;
+  padding-bottom: 8vh;
+}
+
+.headerContainer {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5%;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url("../../../assets/background_contactInformation.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px;
+  opacity: 0;
+  animation: fadeInContent 2s ease-in-out 0.5s forwards;
 }
 
 .title {
-  font-size: 44px;
-  padding-bottom: 2%;
+  color: white;
+  font-size: 62px;
+  white-space: pre-line;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  letter-spacing: -4.2px;
+  font-weight: 500;
 }
 
-.description {
-  text-align: justify;
-  font-size: 22px;
-  color: #a6abb0;
+.subtitle {
+  width: 70%;
+  font-size: 24px;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.5px;
 }
 
 h3 {
@@ -92,6 +125,7 @@ h3 {
   gap: 5%;
   color: white;
   margin-bottom: 10vh;
+  padding: 3%;
 }
 
 .aboutUsSection {
@@ -104,6 +138,7 @@ h3 {
   gap: 5%;
   color: white;
   margin-bottom: 10vh;
+  padding: 3%;
 }
 
 .aboutContent {
@@ -167,11 +202,13 @@ h3 {
   }
   
   .title {
-    font-size: 48px;
+    font-size: 58px;
+    letter-spacing: -3.8px;
   }
   
-  .description {
-    font-size: 24px;
+  .subtitle {
+    font-size: 22px;
+    letter-spacing: -0.4px;
   }
   
   h3 {
@@ -185,11 +222,13 @@ h3 {
   }
   
   .title {
-    font-size: 42px;
+    font-size: 54px;
+    letter-spacing: -3.5px;
   }
   
-  .description {
+  .subtitle {
     font-size: 21px;
+    letter-spacing: -0.4px;
   }
   
   h3 {
@@ -207,11 +246,14 @@ h3 {
   }
   
   .title {
-    font-size: 36px;
+    font-size: 48px;
+    letter-spacing: -3.0px;
   }
   
-  .description {
+  .subtitle {
     font-size: 20px;
+    width: 75%;
+    letter-spacing: -0.3px;
   }
   
   h3 {
@@ -271,13 +313,14 @@ h3 {
   }
   
   .title {
-    font-size: 32px;
-    text-align: center;
+    font-size: 42px;
+    letter-spacing: -2.5px;
   }
   
-  .description {
+  .subtitle {
     font-size: 18px;
-    text-align: center;
+    width: 80%;
+    letter-spacing: -0.3px;
     line-height: 1.6;
   }
   
@@ -353,6 +396,35 @@ h3 {
   .mainContainer {
     padding-top: 6vh;
   }
+
+  header {
+    height: 110vh !important;
+    padding-top: 0 !important;
+    padding-bottom: 3vh;
+    gap: 3%;
+  }
+  
+  .headerContainer {
+    width: 85%;
+    height: 65%;
+    gap: 4%;
+    border-radius: 6px;
+    padding: 0 5%;
+  }
+  
+  .title {
+    font-size: 28px;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  .subtitle {
+    width: 95%;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 1.4;
+  }
   
   .container {
     width: 95%;
@@ -371,14 +443,15 @@ h3 {
   }
   
   .title {
-    font-size: 28px;
-    text-align: center;
+    font-size: 36px;
+    letter-spacing: -2.0px;
     padding-bottom: 4%;
   }
   
-  .description {
+  .subtitle {
     font-size: 16px;
-    text-align: justify;
+    width: 85%;
+    letter-spacing: -0.2px;
     line-height: 1.7;
   }
   
@@ -408,7 +481,7 @@ h3 {
   
   .contactInfoSection {
     height: auto;
-    min-height: 70vh;
+    min-height: 60vh;
     padding: 2rem 0;
   }
   
@@ -450,7 +523,7 @@ h3 {
   .aboutItemDescription {
     font-size: 0.9rem;
     line-height: 1.8;
-    text-align: justify;
+    text-align: center;
   }
 }
 
@@ -463,4 +536,3 @@ h3 {
     opacity: 1;
   }
 }
-

@@ -24,9 +24,10 @@
 
 /* Responsive */
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 769px) {
   .specialPackagesSection {
     padding-top: 15vh;
+    height: 95vh;
   }
 
   .cardsContainer {
@@ -34,10 +35,56 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    gap: 20px;
-    height: 100%;
+    gap: 30px;
+    height: 70%;
+    width: 95%;
   }
+  
   .title {
     margin-bottom: 40px;
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .specialPackagesSection {
+    height: 95vh;
+    padding: 8vh 0 5vh 0;
+    justify-content: flex-start;
+  }
+
+  .cardsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    height: auto;
+    width: 95%;
+    padding-bottom: 5vh;
+  }
+  
+  .title {
+    margin-bottom: 40px;
+    font-size: 28px;
+    text-align: center;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .specialPackagesSection {
+    height: 100vh;
+    padding: 6vh 0 4vh 0;
+  }
+
+  .cardsContainer {
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 35px;
   }
 }

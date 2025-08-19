@@ -93,24 +93,6 @@ export default function NavBar({ animated = false, page = "" }) {
             <h3>Agendar</h3>
           </div>
         </NavLink>
-        <NavLink to="/services">
-          <div
-            className={`${styles.divDiv2NavBar} 
-          ${animated ? styles.animatedElement : ""}
-          ${currentPage == "services" ? styles.currentDivDiv2NavBar : ""}
-          `}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <span
-              className={`material-symbols-outlined ${
-                animated ? styles.animatedElement : ""
-              }`}
-            >
-              content_cut
-            </span>
-            <h3>Servicios</h3>
-          </div>
-        </NavLink>
         <NavLink to="/calendar">
           <div
             className={`${styles.divDiv2NavBar} ${
@@ -131,6 +113,24 @@ export default function NavBar({ animated = false, page = "" }) {
               calendar_clock
             </span>
             <h3>Calendario de citas</h3>
+          </div>
+        </NavLink>
+        <NavLink to="/services">
+          <div
+            className={`${styles.divDiv2NavBar} 
+          ${animated ? styles.animatedElement : ""}
+          ${currentPage == "services" ? styles.currentDivDiv2NavBar : ""}
+          `}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <span
+              className={`material-symbols-outlined ${
+                animated ? styles.animatedElement : ""
+              }`}
+            >
+              content_cut
+            </span>
+            <h3>Servicios</h3>
           </div>
         </NavLink>
         <NavLink to="/contact-information">

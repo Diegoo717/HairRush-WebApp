@@ -4,21 +4,18 @@ import ContactDetails from "../contactDetails/ContactDetails";
 export default function MainContainer() {
   return (
     <>
-      <div className={styles.mainContainer}>
-        <section className={styles.contactUsSection}>
-          <div className={styles.container}>
-            <div className={styles.titleWrapper}>
-              <h1 className={styles.title}>Contáctanos</h1>
-            </div>
-            <p className={styles.description}>
-              ¡Estamos aquí para ayudarte! Ya sea que tengas una pregunta sobre
-              nuestros servicios, quieras reservar una cita o simplemente
-              quieras conocer más sobre lo que hacemos, nos encantará saber de
-              ti. Contáctanos por cualquiera de los medios que aparecen a
-              continuación o visitanos para una consulta personalizada.
+        <header>
+          <div className={styles.headerContainer}>
+            <h1 className={styles.title}>
+              Conecta con Nosotros
+            </h1>
+            <p className={styles.subtitle}>
+              Tu próximo look excepcional está a un click de distancia. 
+              <br />
+              Contáctanos para proporcionarte toda la información que necesites.
             </p>
           </div>
-        </section>
+        </header>
         <section className={styles.mapSection}>
           <div className={styles.container}>
             <div className={styles.titleWrapper}>
@@ -134,7 +131,6 @@ export default function MainContainer() {
             </div>
           </div>
         </section>
-      </div>
     </>
   );
 }

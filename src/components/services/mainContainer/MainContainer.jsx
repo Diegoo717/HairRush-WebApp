@@ -16,7 +16,7 @@ export default function MainContainer() {
       
       <section className={styles.ourServicesSection}>
         <OurServicesCard
-          title="✂️ Corte de cabello"
+          title="Corte de cabello"
           description="Nuestros barberos expertos brindan cortes de cabello de precisión
             adaptados a tu estilo y preferencias personales. Desde cortes
             clásicos atemporales hasta las tendencias más modernas y
@@ -34,7 +34,7 @@ export default function MainContainer() {
       
       <section className={styles.ourServicesSection}>
         <OurServicesCard
-          title="🪒 Afeitado tradicional"
+          title="Afeitado tradicional"
           description="Experimenta el lujo de un afeitado tradicional con toalla caliente, 
           una experiencia relajante que combina tradición y sofisticación. Nuestros barberos hábiles utilizan 
           técnicas ancestrales transmitidas de generación en generación, junto con productos premium de alta calidad para 
@@ -49,7 +49,7 @@ export default function MainContainer() {
       
       <section className={styles.ourServicesSection}>
         <OurServicesCard
-          title="🖤 Mascarilla de carbón activado"
+          title="Mascarilla de carbón activado"
           description="Limpia profundamente y rejuvenece tu piel con nuestro exclusivo tratamiento de mascarilla de carbón activado, 
           ideal para todo tipo de piel. Este servicio especializado ayuda a eliminar las impurezas acumuladas, exceso de grasa y toxinas de los poros, dejando tu piel notablemente más fresca, suave y revitalizada. La mascarilla de carbón activado es perfecta para combatir puntos negros, 
           reducir el brillo excesivo y mejorar la textura general de la piel del rostro."
@@ -65,7 +65,7 @@ export default function MainContainer() {
         <OurServicesCard
           title={
             <>
-              🧔 Diseño y mantenimiento
+              Diseño y mantenimiento
               <br />
               de barba y bigote
             </>
@@ -85,7 +85,7 @@ export default function MainContainer() {
       
       <section className={styles.ourServicesSection}>
         <OurServicesCard
-          title="💎 Aplicación de productos capilares"
+          title="Aplicación de productos capilares"
           description="Mejora y perfecciona tu peinado con nuestra aplicación profesional de productos 
           capilares de primera calidad, diseñada para todo tipo de cabello. Utilizamos una selección cuidadosa 
           de productos premium y técnicas especializadas para lograr exactamente el look que deseas, desde estilos 
