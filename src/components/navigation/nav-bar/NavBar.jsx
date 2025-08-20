@@ -93,7 +93,7 @@ export default function NavBar({ animated = false, page = "" }) {
             <h3>Agendar</h3>
           </div>
         </NavLink>
-        <NavLink to="/calendar">
+        <NavLink to="/appointment-calendar">
           <div
             className={`${styles.divDiv2NavBar} ${
               animated ? styles.animatedElement : ""

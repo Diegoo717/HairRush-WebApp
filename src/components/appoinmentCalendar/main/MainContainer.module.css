@@ -1,0 +1,238 @@
+.titleContainer {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: white;
+  font-size: 38px;
+  opacity: 0;
+  animation: fadeInContent 2s ease-in-out 0.5s forwards;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 10vh;
+  opacity: 0;
+  animation: fadeInContent 2s ease-in-out 0.5s forwards;
+}
+
+.calendarSection {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2%;
+}
+
+.calendarsContainer {
+  display: flex;
+  gap: 21px; 
+  width: 100%;
+  max-width: 864px; 
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.calendarWrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 259px; 
+  max-width: 302px; 
+  flex: 1;
+  gap: 2px;
+}
+
+.calendarHeader {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  justify-content: space-between;
+}
+
+.navButton {
+  display: flex;
+  width: 36px; 
+  height: 36px; 
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.navButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.monthTitle {
+  color: white;
+  font-size: 14px; 
+  font-weight: bold;
+  line-height: 1.25;
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.dayHeader {
+  color: white;
+  font-size: 12px; 
+  font-weight: bold;
+  line-height: 1.15;
+  letter-spacing: 0.015em;
+  display: flex;
+  height: 43px; 
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2px;
+}
+
+.dayButton {
+  height: 43px; 
+  width: 100%;
+  color: white;
+  font-size: 13px; 
+  font-weight: 500;
+  line-height: 1.15;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dayButtonSelected {
+  height: 43px; 
+  width: 100%;
+  color: #131416;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.15;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dayNumber {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.dayNumber:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dayNumberSelected {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #c1d1e1;
+}
+
+.timesSection {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 200px;
+}
+
+.timesTitle {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  padding: 16px 0 8px 0;
+  margin: 0;
+}
+
+.timesContainer {
+  display: flex;
+  border-bottom: 1px solid #42474c;
+  gap: 32px;
+  overflow-x: auto;
+  padding-bottom: 0;
+}
+
+.timeSlot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid transparent;
+  color: #a5abb1;
+  padding: 16px 0 13px 0;
+  text-decoration: none;
+  min-width: fit-content;
+  transition: all 0.2s;
+}
+
+.timeSlot:hover {
+  color: white;
+}
+
+.timeSlotSelected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid white;
+  color: white;
+  padding: 16px 0 13px 0;
+  text-decoration: none;
+  min-width: fit-content;
+}
+
+.timeText {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.15;
+  letter-spacing: 0.015em;
+  margin: 0;
+}
+
+/* Responsive */
+
+/* Animations */
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
