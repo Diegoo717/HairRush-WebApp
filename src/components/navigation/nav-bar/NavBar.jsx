@@ -35,7 +35,7 @@ export default function NavBar({ animated = false, page = "" }) {
       >
         <img
           id={styles.logo}
-          src="src/assets/Logo.png"
+          src="src/assets/logo.png"
           alt=""
           className={animated ? styles.animatedElement : ""}
         />
