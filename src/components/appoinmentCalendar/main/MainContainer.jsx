@@ -47,7 +47,7 @@ export default function MainContainer() {
     return (
         <>
             <header className={styles.titleContainer}>
-                <h1 className={styles.title}>Calendar</h1>
+                <h1 className={styles.title}>Calendario</h1>
             </header>
             <main className={styles.mainContainer}>
                 <section className={styles.calendarSection}>
@@ -125,7 +125,7 @@ export default function MainContainer() {
                 </section>
                 
                 <section className={styles.timesSection}>
-                    <h3 className={styles.timesTitle}>Available Times</h3>
+                    <h3 className={styles.timesTitle}>Horas disponibles</h3>
                     <div className={styles.timesContainer}>
                         {availableTimes.map((time, index) => (
                             <a
