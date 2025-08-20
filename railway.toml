@@ -1,0 +1,6 @@
+[build]
+builder = "nixpacks"
+builderSettings = { nodeVersion = "22.12.0" }
+
+[deploy]
+startCommand = "npm start"
