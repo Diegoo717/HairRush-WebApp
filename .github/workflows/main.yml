@@ -17,11 +17,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.12.0'   
+          node-version: '22.12.0'
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm ci --legacy-peer-deps
 
       - name: Build React app
         run: npm run build
@@ -39,7 +39,7 @@ jobs:
           railway up --service "HairRush-WebApp" --detach
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        timeout-minutes: 10
+        timeout-minutes: 15
 
       - name: Check deployment status
         run: railway status
