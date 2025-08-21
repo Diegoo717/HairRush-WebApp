@@ -30,9 +30,6 @@
   animation: none !important;
 }
 
-/* Sin loading states - carga silenciosa */
-
-/* Error States */
 .errorContainer {
   position: absolute;
   top: 50%;
@@ -148,14 +145,19 @@
   to { opacity: 1; }
 }
 
-/* Responsive - Ajustar zoom para móviles */
+/* Responsive */
 @media (max-width: 480px) {
   .splineContainer {
-    width: 120% !important;
-    height: 120% !important;
-    top: -10% !important;
-    left: -10% !important;
-    transform: scale(0.7) !important; /* Más alejado */
+    width: 160% !important;
+    height: 160% !important;
+    top: -30% !important;
+    left: -30% !important;
+    transform: scale(0.6) !important; 
+  }
+  
+  .div {
+    bottom: 20px;
+    height: 60px;
   }
 }
 
@@ -165,7 +167,15 @@
     height: 110% !important;
     top: -5% !important;
     left: -5% !important;
-    transform: scale(0.8) !important; /* Más alejado */
+    transform: scale(0.7) !important; 
+  }
+  
+  .div {
+    width: 170px;
+    height: 38px;
+    bottom: 65px;
+    right: 18px;
+    font-size: 15px;
   }
 }
 
@@ -175,7 +185,15 @@
     height: 105% !important;
     top: -2.5% !important;
     left: -2.5% !important;
-    transform: scale(0.9) !important; /* Más alejado */
+    transform: scale(0.8) !important;
+  }
+  
+  .div {
+    width: 180px;
+    height: 80px;
+    bottom: 80px;
+    right: 18px;
+    font-size: 15px;
   }
 }
 
@@ -189,14 +207,6 @@
     height: 180%;
     transform: translate(-50%, -50%) scale(0.8);
   }
-
-  .div {
-    width: 170px;
-    height: 38px;
-    bottom: 18px;
-    right: 18px;
-    font-size: 15px;
-  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -208,14 +218,6 @@
     width: 160%;
     height: 160%;
     transform: translate(-50%, -50%) scale(0.9);
-  }
-
-  .div {
-    width: 180px;
-    height: 38px;
-    bottom: 18px;
-    right: 18px;
-    font-size: 15px;
   }
 }
 
@@ -240,7 +242,7 @@
   .div {
     width: 140px;
     height: 32px;
-    bottom: 12px;
+    bottom: 25px;
     right: 12px;
     font-size: 13px;
   }
@@ -250,13 +252,13 @@
   .splineContainer {
     width: 250%;
     height: 250%;
-    transform: translate(-50%, -50%) scale(0.6);
+    transform: translate(-50%, -50%) scale(0.5);
   }
 
   .div {
     width: 120px;
     height: 30px;
-    bottom: 10px;
+    bottom: 20px;
     right: 10px;
     font-size: 12px;
   }
