@@ -63,7 +63,7 @@ export default function MainContainer() {
         if (!forceWebGLSettings()) return;
 
         addDebugLog(`⏱️ Iniciando timeout de ${TIMEOUT_DURATION/1000}s...`);
-        
+
         timeoutRef.current = setTimeout(() => {
             if (!showError) {
                 addDebugLog('⏰ Timeout alcanzado');
@@ -112,6 +112,7 @@ export default function MainContainer() {
         setErrorInfo('');
         window.location.reload();
     };
+
     return (
         <main className={styles.MainContainer}>
             <div style={{
@@ -150,11 +151,12 @@ export default function MainContainer() {
                         style={{
                             width: '100%',
                             height: '100%',
-                            imageRendering: 'auto',
-                            willChange: 'transform', 
+                            opacity: 1, 
+                            zIndex: 10,
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
                         }}
-                        renderOnDemand={false}
-                        camera-controls="true"
                     />
                 </div>
             )}
