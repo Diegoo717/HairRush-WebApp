@@ -25,12 +25,14 @@
   transform: none !important;
   transform-origin: center center;
   transition: transform 0.3s ease-out;
-  opacity: 1 !important; 
-  z-index: 5 !important; 
-  background: rgba(255,0,0,0.1); 
-  animation: none !important; 
+  opacity: 1 !important;
+  z-index: 5 !important;
+  animation: none !important;
 }
 
+/* Sin loading states - carga silenciosa */
+
+/* Error States */
 .errorContainer {
   position: absolute;
   top: 50%;
@@ -146,14 +148,34 @@
   to { opacity: 1; }
 }
 
-/* Responsive */
+/* Responsive - Ajustar zoom para móviles */
 @media (max-width: 480px) {
   .splineContainer {
-    width: 100% !important;
-    height: 100% !important;
-    transform: none !important;
-    top: 0 !important;
-    left: 0 !important;
+    width: 120% !important;
+    height: 120% !important;
+    top: -10% !important;
+    left: -10% !important;
+    transform: scale(0.7) !important; /* Más alejado */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .splineContainer {
+    width: 110% !important;
+    height: 110% !important;
+    top: -5% !important;
+    left: -5% !important;
+    transform: scale(0.8) !important; /* Más alejado */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .splineContainer {
+    width: 105% !important;
+    height: 105% !important;
+    top: -2.5% !important;
+    left: -2.5% !important;
+    transform: scale(0.9) !important; /* Más alejado */
   }
 }
 

@@ -6,21 +6,13 @@ export default function MainContainer() {
     const [showError, setShowError] = useState(false);
     const [errorInfo, setErrorInfo] = useState('');
     const [retryCount, setRetryCount] = useState(0);
-    const [debugLog, setDebugLog] = useState(['🔄 Iniciando carga...']);
     const timeoutRef = useRef(null);
 
     const MAX_RETRIES = 3;
     const TIMEOUT_DURATION = 15000; 
 
-    const addDebugLog = (message) => {
-        setDebugLog(prev => [...prev, `${new Date().toLocaleTimeString()}: ${message}`].slice(-10));
-    };
-
     useEffect(() => {
-        addDebugLog('🔍 Iniciando verificaciones...');
-
         const forceWebGLSettings = () => {
-            addDebugLog('🔧 Verificando WebGL...');
             const canvas = document.createElement('canvas');
             canvas.width = 1;
             canvas.height = 1;
@@ -41,32 +33,26 @@ export default function MainContainer() {
                         failIfMajorPerformanceCaveat: false 
                     });
                     if (gl) {
-                        addDebugLog(`✅ WebGL encontrado: ${context}`);
                         break;
                     }
                 } catch (e) {
-                    addDebugLog(`❌ ${context} falló`);
+                    // Error silenciado
                 }
             }
             
             if (!gl) {
-                addDebugLog('❌ WebGL completamente no disponible');
                 setErrorInfo('WebGL no disponible en este dispositivo');
                 setShowError(true);
                 return false;
             }
 
-            addDebugLog('✅ WebGL configurado correctamente');
             return true;
         };
 
         if (!forceWebGLSettings()) return;
 
-        addDebugLog(`⏱️ Iniciando timeout de ${TIMEOUT_DURATION/1000}s...`);
-
         timeoutRef.current = setTimeout(() => {
             if (!showError) {
-                addDebugLog('⏰ Timeout alcanzado');
                 handleRetry('Timeout después de múltiples intentos');
             }
         }, TIMEOUT_DURATION);
@@ -79,28 +65,23 @@ export default function MainContainer() {
     }, [retryCount]);
 
     const handleSplineLoad = () => {
-        addDebugLog('🎉 SPLINE CARGADO EXITOSAMENTE');
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
         }
     };
 
     const handleSplineError = (error) => {
-        addDebugLog(`💥 Error de Spline: ${error?.message || 'desconocido'}`);
         const errorMsg = error?.message || 'Error desconocido al cargar el modelo 3D';
         handleRetry(errorMsg);
     };
 
     const handleRetry = (errorMsg) => {
-        addDebugLog(`🔄 Reintento ${retryCount + 1}/${MAX_RETRIES}: ${errorMsg}`);
         if (retryCount < MAX_RETRIES) {
             setRetryCount(prev => prev + 1);
             setTimeout(() => {
-                addDebugLog('♻️ Recargando página...');
                 window.location.reload();
             }, 2000);
         } else {
-            addDebugLog('🚫 TODOS LOS REINTENTOS FALLARON');
             setErrorInfo(errorMsg);
             setShowError(true);
         }
@@ -115,33 +96,6 @@ export default function MainContainer() {
 
     return (
         <main className={styles.MainContainer}>
-            <div style={{
-                position: 'fixed', 
-                top: '10px', 
-                left: '10px', 
-                right: '10px',
-                maxHeight: '200px',
-                overflow: 'auto',
-                color: 'white', 
-                background: 'rgba(0,0,0,0.9)', 
-                padding: '10px',
-                zIndex: 9999,
-                fontSize: '11px',
-                borderRadius: '5px',
-                fontFamily: 'monospace'
-            }}>
-                <strong>🐛 DEBUG LOG:</strong>
-                {debugLog.map((log, index) => (
-                    <div key={index}>{log}</div>
-                ))}
-                <div style={{marginTop: '10px', borderTop: '1px solid #333', paddingTop: '5px'}}>
-                    <strong>Estado actual:</strong><br/>
-                    showError: {showError ? 'SÍ' : 'NO'}<br/>
-                    retryCount: {retryCount}<br/>
-                    WebGL: {window.WebGLRenderingContext ? '✅' : '❌'}
-                </div>
-            </div>
-
             {!showError && (
                 <div className={styles.splineContainer}>
                     <Spline 
