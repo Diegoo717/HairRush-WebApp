@@ -3,7 +3,7 @@
   height: 100vh;
   background-color: black;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .div {
@@ -17,29 +17,143 @@
 }
 
 .splineContainer {
-  width: 150%; 
-  height: 150%; 
+  width: 150%;
+  height: 150%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   transform-origin: center center;
   transition: transform 0.3s ease-out;
   opacity: 0;
   animation: fadeIn 2s ease-in-out 0.5s forwards;
 }
 
-/* Responsive */
+.errorContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  color: white;
+  text-align: center;
+  max-width: 90%;
+  width: 500px;
+}
 
+.errorContent {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #ff6b6b;
+  backdrop-filter: blur(10px);
+}
+
+.errorContent h2 {
+  margin-bottom: 20px;
+  color: #ff6b6b;
+}
+
+.errorDetails {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.diagnostics {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.diagnostics summary {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.diagnosticInfo {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.errorActions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.retryButton, .reloadButton {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.retryButton {
+  background: #4ecdc4;
+  color: black;
+}
+
+.retryButton:hover {
+  background: #45b7d1;
+  transform: translateY(-2px);
+}
+
+.reloadButton {
+  background: #ff6b6b;
+  color: white;
+}
+
+.reloadButton:hover {
+  background: #ff5252;
+  transform: translateY(-2px);
+}
+
+.suggestions {
+  text-align: left;
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.suggestions h4 {
+  margin-bottom: 10px;
+  color: #4ecdc4;
+}
+
+.suggestions ul {
+  padding-left: 20px;
+}
+
+.suggestions li {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
 @media (max-width: 480px) {
   .MainContainer {
     height: 100vh;
   }
 
   .splineContainer {
-    width: 160%; 
+    width: 160%;
     height: 200%;
-    transform: translate(-50%, -50%) scale(0.6); 
+    transform: translate(-50%, -50%) scale(0.6);
   }
 
   .div {
@@ -48,6 +162,24 @@
     bottom: 15px;
     right: 15px;
     font-size: 14px;
+  }
+
+  .errorContainer {
+    width: 95%;
+    max-width: none;
+  }
+
+  .errorContent {
+    padding: 20px;
+  }
+
+  .errorActions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .diagnosticInfo {
+    font-size: 10px;
   }
 }
 
@@ -98,7 +230,7 @@
     position: relative;
     top: auto;
     left: auto;
-    transform: none; 
+    transform: none;
   }
 }
 
@@ -132,11 +264,4 @@
     right: 10px;
     font-size: 12px;
   }
-}
-
-/* Animations */
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
