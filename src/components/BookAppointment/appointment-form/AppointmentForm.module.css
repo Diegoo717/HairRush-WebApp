@@ -144,9 +144,7 @@
   font-size: 12px;
 }
 
-
 /* Responsive */
-
 @media (max-width: 1200px) {
   .formContainer {
     width: 50%;
@@ -307,6 +305,7 @@
     font-size: 15px;
     font-weight: 500;
   }
+
 }
 
 /* Animations */

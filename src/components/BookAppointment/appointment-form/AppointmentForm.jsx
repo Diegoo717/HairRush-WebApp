@@ -1,4 +1,5 @@
 import styles from "./AppointmentForm.module.css";
+import ConfirmationModal from "../confirmationModal/ConfirmationModal";
 import { useState } from "react";
 
 export default function AppointmentForm() {
@@ -15,6 +16,8 @@ export default function AppointmentForm() {
   const [timeError, setTimeError] = useState("");
   const [serviceError, setServiceError] = useState("");
   const [fieldsError, setFieldsError] = useState("");
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   function submitForm() {
     if (!name || !email || !date || !time || !service) {
@@ -37,7 +40,17 @@ export default function AppointmentForm() {
     setServiceError(serviceErr || "");
 
     if (!nameErr && !emailErr && !dateErr && !timeErr && !serviceErr) {
+      setIsModalOpen(true);
     }
+  }
+
+  function closeModal() {
+    setIsModalOpen(false);
+    setName("");
+    setEmail("");
+    setDate("");
+    setTime("");
+    setService("");
   }
 
   function validateFullName(fullName) {
@@ -299,6 +312,12 @@ export default function AppointmentForm() {
           </button>
         </div>
       </form>
+
+      <ConfirmationModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        email={email}
+      />
     </>
   );
 }
