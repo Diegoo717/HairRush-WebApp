@@ -25,7 +25,8 @@
   white-space: nowrap;
   color: black;
   background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
+  transform: translateZ(0);
+  backface-visibility: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   will-change: transform, background, color, box-shadow;
