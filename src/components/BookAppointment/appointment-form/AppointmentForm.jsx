@@ -1,6 +1,7 @@
 import styles from "./AppointmentForm.module.css";
 import ConfirmationModal from "../confirmationModal/ConfirmationModal";
 import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
 
 export default function AppointmentForm() {
   const [pulseEnabled, setPulseEnabled] = useState(true);
@@ -16,6 +17,7 @@ export default function AppointmentForm() {
   const [timeError, setTimeError] = useState("");
   const [serviceError, setServiceError] = useState("");
   const [fieldsError, setFieldsError] = useState("");
+  const [serverError, setServerError] = useState("");
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -40,8 +42,104 @@ export default function AppointmentForm() {
     setServiceError(serviceErr || "");
 
     if (!nameErr && !emailErr && !dateErr && !timeErr && !serviceErr) {
-      setIsModalOpen(true);
+      mutation.mutate(
+        {
+          fullName: name,
+          email: email,
+          date: date,
+          time: time,
+          service: service,
+        },
+        {
+          onSuccess: () => {
+            setIsModalOpen(true);
+            setServerError("");
+          },
+          onError: (error) => {
+            const spanishMessage = translateErrorMessage(error.message);
+            setServerError(spanishMessage);
+          },
+        }
+      );
     }
+  }
+
+  const scheduleAppointment = async (userData) => {
+    const response = await fetch(
+      "https://hairrush-rest-api.diecode.lat/api/scheduleAppointment",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(userData),
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Error desconocido");
+    }
+
+    return data;
+  };
+
+  const mutation = useMutation({
+    mutationFn: scheduleAppointment,
+  });
+
+  function translateErrorMessage(errorMessage) {
+    const translations = {
+      "All fields are required": "Todos los campos son obligatorios",
+      "Server error": "Error del servidor",
+      "Error desconocido": "Error desconocido",
+
+      "Full name is required": "El nombre completo es obligatorio",
+      "Name must be valid text": "El nombre debe ser texto válido",
+      "Name cannot be empty": "El nombre no puede estar vacío",
+      "Name must contain at least 8 characters":
+        "El nombre debe contener al menos 8 caracteres",
+      "Only letters, spaces and hyphens are allowed":
+        "Solo se permiten letras, espacios y guiones",
+
+      "Email is required": "El correo electrónico es obligatorio",
+      "Email must be valid text": "El correo electrónico debe ser texto válido",
+      "Enter a valid email address": "Ingresa un correo electrónico válido",
+
+      "Date is required": "La fecha es obligatoria",
+      "Date must have YYYY-MM-DD format":
+        "La fecha debe tener el formato YYYY-MM-DD",
+      "Month must be between 01 and 12": "El mes debe estar entre 01 y 12",
+      "Day must be between 01 and 31": "El día debe estar entre 01 y 31",
+      "Day is not valid for the selected month":
+        "El día no es válido para el mes seleccionado",
+      "Date must be at least 1 day in advance from today":
+        "La fecha debe ser con al menos 1 día de antelación a partir de hoy",
+      "Appointments can only be scheduled Monday to Friday":
+        "Solo se puede agendar de lunes a viernes",
+
+      "Time is required": "La hora es obligatoria",
+      "Time must have HH:MM:SS format":
+        "La hora debe tener el formato HH:MM:SS",
+      "Seconds must be 00": "Los segundos deben ser 00",
+      "Minutes must be 00 or 30": "Los minutos deben ser 00 o 30",
+      "Service hours are 08:00 to 14:00 and 16:00 to 20:00":
+        "El horario de atención es de 08:00 a 14:00 y de 16:00 a 20:00",
+
+      "You must select a service": "Debes seleccionar un servicio",
+      "Service must be valid text": "El servicio debe ser texto válido",
+      "You must select a valid service": "Debes seleccionar un servicio válido",
+      "Service must have at least 3 characters":
+        "El servicio debe tener al menos 3 caracteres",
+      "Service cannot have more than 40 characters":
+        "El servicio no puede tener más de 40 caracteres",
+      "Service can only contain letters and spaces":
+        "El servicio solo puede contener letras y espacios",
+
+      "Appointment scheduled already exists":
+        "Ya existe una cita agendada para esa fecha y hora",
+    };
+
+    return translations[errorMessage] || errorMessage;
   }
 
   function closeModal() {
@@ -292,6 +390,16 @@ export default function AppointmentForm() {
         >
           <div>
             <p className={styles.errorP}>{serviceError}</p>
+          </div>
+        </div>
+
+        <div
+          className={
+            serverError ? styles.errorContainerVisible : styles.errorContainer
+          }
+        >
+          <div>
+            <p className={styles.errorP}>{serverError}</p>
           </div>
         </div>
 
