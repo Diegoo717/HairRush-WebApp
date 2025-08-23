@@ -37,15 +37,6 @@
   animation: initialShimmer 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
 }
 
-@keyframes initialShimmer {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(200%);
-  }
-}
-
 .card:hover {
   transform: rotateX(-8deg) rotateY(2deg) translateZ(20px);
   border-color: #5a6268;
@@ -111,11 +102,11 @@
     height: 70%;
   }
   .cardTitle {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .cardHeader {
-    padding: 5% 0 0 0;
+    padding: 35px 0 15px 0;
   }
   
   .cardIcon {
@@ -134,7 +125,7 @@
     height: 28%;
   }
   .cardTitle {
-    font-size: 26px;
+    font-size: 22px;
   }
   
   .cardHeader {
@@ -142,7 +133,72 @@
   }
   
   .cardP {
-    font-size: 24px;
+    font-size: 18px;
     padding-bottom: 5%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .card {
+    width: 30%;
+    height: 60%;
+  }
+  
+  .cardTitle {
+    font-size: 18px;
+  }
+  
+  .cardP {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1530px) {
+  .card {
+    width: 30%;
+    height: 60%;
+  }
+
+  .cardHeader{
+    padding: 30px 20px 0px 0;
+  }
+  
+  .cardTitle {
+    font-size: 21px;
+  }
+  
+  .cardP {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1550px) {
+  .card {
+    width: 30%;
+    height: 75%;
+  }
+  
+  .cardTitle {
+    font-size: 26px;
+  }
+  
+  .cardHeader {
+    padding: 8% 0 0 0;
+  }
+  
+  .cardP {
+    font-size: 22px;
+    padding-bottom: 12%;
+  }
+}
+
+/* Animations */
+
+@keyframes initialShimmer {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200%);
   }
 }
