@@ -121,7 +121,8 @@ export default function AppointmentForm() {
       "Time must have HH:MM:SS format":
         "La hora debe tener el formato HH:MM:SS",
       "Seconds must be 00": "Los segundos deben ser 00",
-      "Minutes must be 00 or 30": "Los minutos deben ser 00 o 30",
+      "Only full hours are allowed (example: 8:00, 9:00, 10:00)": 
+      "Solo se permiten horas completas (ejemplo: 8:00, 9:00, 10:00)",
       "Service hours are 08:00 to 14:00 and 16:00 to 20:00":
         "El horario de atención es de 08:00 a 14:00 y de 16:00 a 20:00",
 
@@ -252,9 +253,9 @@ export default function AppointmentForm() {
       return "Los segundos deben ser 00";
     }
 
-    if (minutes !== 0 && minutes !== 30) {
-      return "Los minutos deben ser 00 o 30";
-    }
+    if (minutes !== 0) {
+    return "Solo se permiten horas completas (ejemplo: 8:00, 9:00, 10:00)";
+  }
 
     if (hours < 8 || hours > 20 || (hours > 14 && hours < 16)) {
       return "El horario de atención es de 08:00 a 14:00 y de 16:00 a 20:00";
