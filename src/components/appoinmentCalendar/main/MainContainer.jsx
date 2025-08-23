@@ -1,5 +1,5 @@
 import styles from "./MainContainer.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 export default function MainContainer() {
@@ -14,6 +14,14 @@ export default function MainContainer() {
   const [selectedDay, setSelectedDay] = useState(5);
   const [selectedMonth, setSelectedMonth] = useState(realCurrentMonth);
   const [selectedYear, setSelectedYear] = useState(realCurrentYear);
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+      
+      if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+      }
+    }, []);
 
   const monthNames = [
     "January",

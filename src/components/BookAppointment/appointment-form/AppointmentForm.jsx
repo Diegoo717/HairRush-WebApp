@@ -1,7 +1,7 @@
 import styles from "./AppointmentForm.module.css";
 import ConfirmationModal from "../confirmationModal/ConfirmationModal";
-import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
+import { useState, useEffect } from "react";
 
 export default function AppointmentForm() {
   const [pulseEnabled, setPulseEnabled] = useState(true);
@@ -20,6 +20,14 @@ export default function AppointmentForm() {
   const [serverError, setServerError] = useState("");
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+    if (history.scrollRestoration) {
+      history.scrollRestoration = 'manual';
+    }
+  }, []);
 
   function submitForm() {
     if (!name || !email || !date || !time || !service) {

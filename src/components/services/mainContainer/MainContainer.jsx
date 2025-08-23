@@ -1,7 +1,17 @@
 import styles from "./MainContainer.module.css";
 import OurServicesCard from "../cards/OurServicesCard/OurServicesCard";
+import {useEffect} from "react"
 
 export default function MainContainer() {
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+      
+      if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+      }
+    }, []);
+
   return (
     <>
       <header>
